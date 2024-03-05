@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Pear.DAL.Data.Suppliers>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>All Suppliers</h1>
+
+<br />
+<br />
+
+<a href="@Url.Action("Create", "Supplier")" class="btn btn-primary">Add New Supplier</a>
+
+<br />
+
+@if (Model.Any())
+{
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.First().SupplierName)</th>
+                <th>@Html.DisplayNameFor(model => model.First().SupplierID)</th>
+                <th>Details</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var supplier in Model)
+            {
+                <tr>
+                    <td>@supplier.SupplierName</td>
+                    <td>@supplier.SupplierID</td>
+                    <td>
+                        <a href="@Url.Action("Details", "Supplier", new { id = supplier.SupplierID })" class="btn btn-info">Details</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Edit", "Supplier", new { id = supplier.SupplierID })" class="btn btn-warning">Update</a>
+                    </td>
+                    <td>
+                        <a href="@Url.Action("Delete", "Supplier", new { id = supplier.SupplierID })" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="mt-4 alert alert-warning">
+        <h3>There are no suppliers</h3>
+    </div>
+}

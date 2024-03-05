@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PearWeb.PL", "PearWeb.PL\PearWeb.PL.csproj", "{308BA394-901F-498A-8EA7-9E3135B09FAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pear.DAL", "Pear.DAL\Pear.DAL.csproj", "{0467913A-7E35-4933-87FB-F1F414C3AE8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pear.BLL", "Pear.BLL\Pear.BLL.csproj", "{CFBD45E8-D5F1-4F15-9F2B-1D15955344A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{308BA394-901F-498A-8EA7-9E3135B09FAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{308BA394-901F-498A-8EA7-9E3135B09FAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{308BA394-901F-498A-8EA7-9E3135B09FAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{308BA394-901F-498A-8EA7-9E3135B09FAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0467913A-7E35-4933-87FB-F1F414C3AE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0467913A-7E35-4933-87FB-F1F414C3AE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0467913A-7E35-4933-87FB-F1F414C3AE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0467913A-7E35-4933-87FB-F1F414C3AE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFBD45E8-D5F1-4F15-9F2B-1D15955344A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFBD45E8-D5F1-4F15-9F2B-1D15955344A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFBD45E8-D5F1-4F15-9F2B-1D15955344A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFBD45E8-D5F1-4F15-9F2B-1D15955344A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40F91B24-294F-4625-A323-CC0BEFD95F28}
+	EndGlobalSection
+EndGlobal

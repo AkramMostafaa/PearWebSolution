@@ -1,0 +1,17 @@
+﻿@model string
+
+<td>
+    <a href="@Url.Action("Details", "Product", new { id = Model })" class="btn btn-warning">
+        <i class="fas fa-eye"></i> Details
+    </a>
+</td>
+<td>
+    <a href="@Url.Action("Edit", "Product", new { id = Model })" class="btn btn-success">
+        <i class="fas fa-edit"></i> Update
+    </a>
+</td>
+<td>
+    <a href="@Url.Action("Delete", "Product", new { id = Model })" class="btn btn-danger">
+        <i class="fas fa-trash"></i> Delete
+    </a>
+</td>

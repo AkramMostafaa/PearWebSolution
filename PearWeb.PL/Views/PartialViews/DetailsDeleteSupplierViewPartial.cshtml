@@ -1,0 +1,8 @@
+﻿@model Pear.DAL.Data.Suppliers
+
+<div class="form-group">
+    @Html.LabelFor(model => model.SupplierName, new { @class = "col-form-label" })
+    @Html.TextBoxFor(model => model.SupplierName, new { @class = "form-control", @readonly = "readonly" })
+    @Html.HiddenFor(model => model.SupplierID)
+
+</div>

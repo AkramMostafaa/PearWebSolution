@@ -1,0 +1,17 @@
+﻿@model Pear.DAL.Data.Suppliers
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Supplier Details</h1>
+
+<br />
+<br />
+
+<div>
+    @Html.Partial("~/Views/PartialViews/DetailsDeleteSupplierViewPartial.cshtml")
+
+    <a href="@Url.Action("Edit", "Supplier", new { id = Model.SupplierID })" class="btn btn-secondary">Edit</a> |
+    <a href="@Url.Action("Index", "Supplier")" class="btn-light">Back To List</a>
+</div>
+

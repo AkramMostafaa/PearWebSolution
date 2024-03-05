@@ -1,0 +1,58 @@
+﻿@model PearWeb.PL.ViewModel.ProductsVM
+<div class="form-group">
+    @Html.Label("Product Name ", new { @class = "col-form-label" })
+    @Html.TextBoxFor(model => model.ProductName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+</div>
+ <div class="form-group">
+     @Html.Label("Supplier ", new { @class = "col-form-label" })
+
+
+     <select class="form-control" name="SupplierID">
+         <option value="">-- Select Supplier --</option>
+         @if (ViewBag.Suppliers != null)
+         {
+             foreach (var item in ViewBag.Suppliers as IEnumerable<SelectListItem>)
+             {
+                 var selected = (item.Value != null && Model != null && Model.SupplierID != null && item.Value.Equals(Model.SupplierID.ToString())) ? "selected" : "";
+
+                 <option value="@item.Value" @(selected)>@item.Text</option>
+             }
+         }
+
+     </select>
+     @Html.ValidationMessageFor(model => model.SupplierID, "", new { @class = "text-danger" })
+ </div>
+
+<div class="form-group">
+    @Html.Label("QuantityPerUnit ", new { @class = "col-form-label" })
+    @Html.TextBoxFor(model => model.QuantityPerUnit, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.QuantityPerUnit, "", new { @class = "text-danger" })
+</div>
+<div class="form-group">
+    @Html.Label("Reorder Level", new { @class = "col-form-label" })
+    @Html.TextBoxFor(model => model.ReorderLevel, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.ReorderLevel, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.Label("Units Price", new { @class = "col-form-label" })
+    @Html.TextBoxFor(model => model.UnitPrice, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.UnitPrice, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.Label("Units In Stock", new { @class = "col-form-label" })
+    @Html.TextBoxFor(model => model.UnitsInStock, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.UnitsInStock, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    @Html.Label("Units On Order", new { @class = "col-form-label" })
+    @Html.TextBoxFor(model => model.UnitsOnOrder, new { @class = "form-control" })
+    @Html.ValidationMessageFor(model => model.UnitsOnOrder, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ProductID)
+    @Html.HiddenFor(model => model.SupplierID)
+
+
+</div>

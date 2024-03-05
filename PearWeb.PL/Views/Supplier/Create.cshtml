@@ -1,0 +1,18 @@
+﻿@model Pear.DAL.Data.Suppliers
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Add New Supplier</h1>
+<br />
+<br />
+<form action="@Url.Action("Create", "Supplier")" method="post" enctype="multipart/form-data">
+    @Html.Partial("~/Views/PartialViews/CreateEditSupplierViewPartial.cshtml")
+
+    <input type="submit" value="Create" class="btn btn-primary" /> |
+    <a href="@Url.Action("Index", "Supplier")" class="btn btn-light">Back To List</a>
+</form>
+
+@* @section ValidationScriptSection{
+        @Html.Partial("_ValidationScriptsPartial")
+    } *@

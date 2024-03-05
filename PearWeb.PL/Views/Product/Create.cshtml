@@ -1,0 +1,17 @@
+﻿@model PearWeb.PL.ViewModel.ProductsVM
+@{
+    ViewBag.Title = "Create";
+}
+
+<h1>Add New Product</h1>
+<br />
+<br />
+<form action="@Url.Action("Create", "Product")" method="post" enctype="multipart/form-data">
+
+    @Html.Partial("~/Views/PartialViews/CreateEditPartialView.cshtml")
+
+    <input type="submit"  value="Create" class="btn-primary" /> |
+
+    <span class="btn-light">@Html.ActionLink("Back To List", "Index")</span>
+
+</form>

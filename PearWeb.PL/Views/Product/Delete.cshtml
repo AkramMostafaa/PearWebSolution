@@ -1,0 +1,17 @@
+﻿
+@model PearWeb.PL.ViewModel.ProductsVM
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h1>Are You Sure to Delete this Product ?</h1>
+<form action="@Url.Action("Delete", new { id = Model.ProductID })" method="post">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.Partial("~/Views/PartialViews/DetailsDeleteProductViewPartial.cshtml")
+
+    <input type="submit" value="Delete" @Url.Action("Delete") class="btn-danger">
+    <a href="@Url.Action("Index")" class="btn-secondary">Cancel</a>
+</form>

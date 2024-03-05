@@ -1,0 +1,16 @@
+﻿@model PearWeb.PL.ViewModel.ProductsVM
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h1>Edit Product</h1>
+
+<br />
+<br />
+<form action="@Url.Action("Edit")" method="post">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.Partial("~/Views/PartialViews/CreateEditPartialView.cshtml")
+
+    <input type="submit" value="Save" class="btn btn-primary" /> |
+    <a href="@Url.Action("Index")" class="btn-secondary">Back To List</a>
+</form>

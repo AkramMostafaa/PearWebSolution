@@ -1,0 +1,19 @@
+﻿
+@model PearWeb.PL.ViewModel.ProductsVM
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Product Details</h1>
+<br />
+<br />
+<form action="@Url.Action("Details", "Product")" method="post" enctype="multipart/form-data">
+
+    @Html.Partial("~/Views/PartialViews/DetailsDeleteProductViewPartial.cshtml")
+
+
+    <a href="@Url.Action("Index")" class="btn-light">Back To List</a>
+
+</form>
+
+

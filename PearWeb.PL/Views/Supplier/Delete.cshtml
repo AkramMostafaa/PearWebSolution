@@ -1,0 +1,16 @@
+﻿@model Pear.DAL.Data.Suppliers
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h1>Delete Supplier</h1>
+
+<h1>Are You Sure to Delete this Supplier ?</h1>
+<form action="@Url.Action("Delete")" method="post">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    @Html.Partial("~/Views/PartialViews/DetailsDeleteSupplierViewPartial.cshtml")
+
+    <input type="submit" value="Delete" class="btn-danger">
+    <a href="@Url.Action("Index")" class="btn-secondary">Cancel</a>
+</form>
