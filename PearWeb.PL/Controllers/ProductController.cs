@@ -122,7 +122,7 @@ namespace PearWeb.PL.Controllers
             {
                 Products product = new Products
                 {
-
+                    ProductID=VM.ProductID,
                     ProductName = VM.ProductName,
                     QuantityPerUnit = VM.QuantityPerUnit,
                     ReorderLevel = VM.ReorderLevel,
