@@ -1,6 +1,7 @@
 ﻿using Pear.BLL;
 using Pear.BLL.Repositories;
 using Pear.DAL.Data;
+using PearWeb.PL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,15 +33,20 @@ namespace PearWeb.PL.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(Suppliers model)
+        public ActionResult Create(SupplierVM VM)
         {
-            if (ModelState.IsValid)
-            {
-                _supplierRepo.Add(model);
+            
+                var supplier = new Suppliers
+                {
+                    SupplierName = VM.SupplierName
+                };
+                _supplierRepo.Add(supplier);
                 //_unitOfWork.Complete();
                 return RedirectToAction(nameof(Index));
-            }
-            return View();
+            
+
+            
+            
         }
 
         [HttpGet]
